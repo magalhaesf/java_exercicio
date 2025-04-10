@@ -1,32 +1,21 @@
 import java.util.Scanner;
 
-	public class par{
+public class Par{
 
-		public static void main(String args[]) {
+	public static void main(String args[]) {
 
-			Scanner sc = new Scanner(System.in);
-
-			int numero;
-			int calculo;
+		Scanner sc = new Scanner(System.in);
+		int numero;
 		
-			System.out.println("Digite um numero:");
-			numero = sc.nextInt();
+		System.out.println("Digite um numero:");
+		numero = sc.nextInt();
 
-			System.out.println();
-
-			int i= numero;
-
-			if(i % 2 == 0){
-
-			
-			System.out.println("\nResultados:\n");
+		if (numero % 2 == 0){
 			System.out.println("Numero par!");
-			}
-			
-			else 
-
+				
+		} else 
 			System.out.println("Numero impar!");
-			
-			
-		}
+
+		sc.close();
 	}
+}

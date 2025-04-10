@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
-class Perfeito {
-    
-    public static boolean isPerfectNumber(int number) {
+public class Perfeito {
+
+    public static boolean numeroPerfeito(int number) {
         int sum = calculateDivisorSum(number, number / 2);
         return sum == number;
     }
@@ -26,11 +26,12 @@ class Perfeito {
         System.out.println("Digite um numero");
         int number = sc.nextInt() ; 
         
-        if (isPerfectNumber(number)) {
+        if (numeroPerfeito(number)) {
             System.out.println(number + " e um numero perfeito.");
         } else {
             System.out.println(number + " nao e um numero perfeito.");
         }
+        sc.close();
     }
 }
 			
