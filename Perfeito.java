@@ -2,20 +2,20 @@ import java.util.Scanner;
 
 public class Perfeito {
 
-    public static boolean numeroPerfeito(int number) {
-        int sum = calculateDivisorSum(number, number / 2);
-        return sum == number;
+    public static boolean numeroPerfeito(int numero) {
+        int soma = calcularDivisorSoma(numero, numero / 2);
+        return soma == numero;
     }
     
-    public static int calculateDivisorSum(int number, int divisor) {
+    public static int calcularDivisorSoma(int numero, int divisor) {
         if (divisor == 1) {
             return 1;
         }
         
-        if (number % divisor == 0) {
-            return divisor + calculateDivisorSum(number, divisor - 1);
+        if (numero % divisor == 0) {
+            return divisor + calcularDivisorSoma(numero, divisor - 1);
         } else {
-            return calculateDivisorSum(number, divisor - 1);
+            return calcularDivisorSoma(numero, divisor - 1);
         }
     }
     
@@ -24,12 +24,12 @@ public class Perfeito {
         Scanner sc = new  Scanner(System.in);
 
         System.out.println("Digite um numero");
-        int number = sc.nextInt() ; 
+        int numero = sc.nextInt() ; 
         
-        if (numeroPerfeito(number)) {
-            System.out.println(number + " e um numero perfeito.");
+        if (numeroPerfeito(numero)) {
+            System.out.println(numero + " e um numero perfeito.");
         } else {
-            System.out.println(number + " nao e um numero perfeito.");
+            System.out.println(numero + " nao e um numero perfeito.");
         }
         sc.close();
     }
